@@ -1,6 +1,6 @@
-<!-- Archivo para conectarse a la base de datos -->
-<?php
 
+<?php
+// <!-- Archivo para conectarse a la base de datos -->
 include("configure.php");
 
 class Conectar
@@ -26,7 +26,7 @@ class Conectar
     //Se realiza conexión a base de datos
     public function conexion(){
         //Usamos PDO para conectar a bd
-        $this->connect=new PDO("mysql:host=".$this->hostName.";dbname=".$this->dbName., $this->usuario, $this->clave);
+        $this->connect=new PDO("mysql:host=".$this->hostName.";dbname=".$this->dbName, $this->usuario, $this->clave);
         try{
             $this->connect->exec("SET NAMES UTF-8");
 
